@@ -1,0 +1,87 @@
+nav {
+    /*background-color: #000000; */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #fffefe;
+}
+
+nav ul li a.active {
+    background-color: #692405;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(/WebD/WebCa/photos/Lib.png); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+h1 { 
+    
+    position: absolute; /* Allows precise positioning */
+    top: 90px; 
+    left: 20px; 
+    text-align: left; 
+    margin: 0; 
+    font-family:cursive;
+    font-size: 100px;
+    font-weight: bolder;
+    display: flex;
+    color: rgb(255, 255, 255);
+
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.footer p {
+    margin: 0;
+}

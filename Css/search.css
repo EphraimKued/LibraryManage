@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    height: 100vh; 
+    font-family: Arial, sans-serif;
+    background-image: url(/WebD/WebCa/photos/Lib.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+
+h1 {
+    margin-top: 20px; 
+    font-size: 50px;
+    color: #333;
+}
+
+/* Styling for the logout link */
+p a {
+    font-size: 1.5rem;
+    color: #0078d7;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Search bar container styling */
+.search-container {
+    margin-top: 20px; 
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center; /* Vertically center content */
+    width: 400px;
+}
+
+
+
+
+
+/* Styling for the input text boxes */
+.search-container input[type="text"] {
+    width: 85%; 
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+
+
+
+
+/* effect on the input boxes */
+.search-container input[type="text"]:focus {
+    border-color: #0078d7;
+}
+
+/* Styling for the search button */
+.search-container button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px; /* Space between the input and button */
+}
+
+
+
+
+
+
+
+/* icon style */
+.search-container button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* Container for the books (flexbox layout) */
+.book-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+/* Book box styling */
+.book {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* 3 books per row, with space between */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+}
+
+/* Hover effect for the book box */
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Book title styling */
+.book h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styling for book details */
+.book p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.book p strong {
+    color: #0078d7;  /* Highlight labels */
+}
+
+/* ISBN to make it stand out */
+.book p:first-of-type {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .book {
+        width: calc(50% - 20px); /* 2 books per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .book {
+        width: 100%; /* 1 book per row on small screens */
+    }
+}
+
+/*dropdown*/
+
+.styled-dropdown {
+    width: 97%; 
+    padding: 10px 15px; 
+    border: 2px solid #ccc; 
+    border-radius: 25px; 
+    font-size: 16px; 
+    background-color: #f9f9f9; 
+    appearance: none;
+    outline: none; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    cursor: pointer; 
+    transition: border-color 0.3s; /* Smooth transition for interactivity */
+
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.footer p {
+    margin: 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc !important; /* Light gray for disabled */
+    color: #666666 !important; 
+    cursor: not-allowed !important; /* Change cursor */
+}
+
+
+
+
+
+
+
+
+nav {
+    /*background-color: #000000; */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #fffefe;
+}
+
+nav ul li a.active {
+    background-color: #692405;
+}
+
